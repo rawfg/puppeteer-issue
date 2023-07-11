@@ -3,10 +3,10 @@ import puppeteer from 'puppeteer-core';
 const browser = await puppeteer.launch({
 	ignoreHTTPSErrors: true,
 	args: ['--single-process'],
-	headless: 'new',
+	headless: 'new', // switching to true on Windows fixes the issue
 	channel: 'chrome',
-	executablePath: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
-	// executablePath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
+	// executablePath: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome', // works fine on MacOS
+	executablePath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe', // crashes on Windows
 });
 
 const pages = await browser.pages();
