@@ -1,6 +1,7 @@
 Running `puppeteer-core` with both `--single-process` and new `headless: 'new'` on Windows crashes:
 
 ```
+PS C:\Users\rawf\projects\puppeteer-issue> node .\index.mjs
 file:///C:/Users/rawf/projects/puppeteer-issue/node_modules/puppeteer-core/lib/esm/puppeteer/common/Connection.js:422
             return Promise.reject(new TargetCloseError(`Protocol error (${method}): Session closed. Most likely the ${__classPrivateFieldGet(this, _CDPSessionImpl_targetType, "f")} has been closed.`));
                                   ^
